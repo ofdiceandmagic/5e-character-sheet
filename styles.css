@@ -28,3 +28,10 @@ body {
 #col3 {
   grid-area: col3;
 }
+
+.card{
+  background: aqua;
+  min-height: 20px;
+  border: 1px solid black;
+  width: 90%;
+}
