@@ -6,11 +6,15 @@ body {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-colums: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30px auto;
   grid-template-areas: 
     "topbar topbar topbar"
     "col1 col2 col3";
+}
+
+#topbar{
+  grid-area: topbar;
 }
 
 #col1 {
