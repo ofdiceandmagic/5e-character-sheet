@@ -11,6 +11,7 @@ body {
   grid-template-areas: 
     "topbar topbar topbar"
     "col1 col2 col3";
+  column-gap: 20px;
 }
 
 #topbar{
