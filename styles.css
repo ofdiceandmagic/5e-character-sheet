@@ -34,5 +34,6 @@ body {
   background: aqua;
   min-height: 20px;
   border: 1px solid black;
-  width: 90%;
+  border-radius: 1em;
+  padding: 1em;
 }
