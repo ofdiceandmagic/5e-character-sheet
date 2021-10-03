@@ -1,7 +1,11 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Character Sheet - Of Dice and Magic</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a0a5cdaf04.js" crossorigin="anonymous"></script>
   </head>
   
   <body>
@@ -9,37 +13,79 @@
     <div id="wrapper">
       
       <div id="topbar">
-        <input type="text" id="name" placeholder="Character Name">
+        <div class="editable" id="name" contentEditable="true">Character Name</div>
+        <button id="load">Load Character</button>
+        <span id="saveIndicator">Last Saved: <span id="saveTime"></span></span>
+        <span id="options">
+          <span id="optionDots"><i class="fas fa-ellipsis-v"></i></span>
+          <div id="optionMenu">
+            <span class="option" id="addCard"><i class="fas fa-plus"></i> Add Card</span>
+          </div>
+        </span>
       </div>
       
       <div id="col1" class="col">
-        <div class="card" id="card1">
-          <input type="text" id="input1">
-          <textarea id="textarea1"></textarea>
+        <div class="card defCard" id="defCard1" data-pos-t="in-col" data-pos-l="in-col">
+          <span class="dragCard"><i class="fas fa-arrows-alt"></i></span>
+          <span class="editCard"><i class="fas fa-edit"></i></span>
+          <span class="popOut"><i class="fas fa-external-link-alt"></i></span>
+          <span class="cardOpts">
+            <span class="cardDots"><i class="fas fa-ellipsis-v"></i></span>
+            <div class="cardOptsMenu">
+              <span class="cardOption">Example</span>
+            </div>
+          </span>
+          <div class="editable" id="defEditor1" contentEditable="false"></div> 
         </div>
 
-        <div class="card" id="card1a">
-          <input type="text" id="input1a">
-          <textarea id="textarea1a"></textarea>
+        <div class="card defCard" id="defCard1a" data-pos-t="in-col" data-pos-l="in-col">
+          <span class="dragCard"><i class="fas fa-arrows-alt"></i></span>
+          <span class="editCard"><i class="fas fa-edit"></i></span>
+          <span class="popOut"><i class="fas fa-external-link-alt"></i></span>
+          <span class="cardOpts">
+            <span class="cardDots"><i class="fas fa-ellipsis-v"></i></span>
+            <div class="cardOptsMenu">
+              <span class="cardOption">Example</span>
+            </div>
+          </span>
+          <div class="editable" id="defEditor1a" contentEditable="false"></div>
         </div>
       </div>
       
       <div id="col2" class="col">
-        <div class="card" id="card2">
-          <input type="text" id="input2">
-          <textarea id="textarea2"></textarea>
+        <div class="card defCard" id="defCard2" data-pos-t="in-col" data-pos-l="in-col">
+          <span class="dragCard"><i class="fas fa-arrows-alt"></i></span>
+          <span class="editCard"><i class="fas fa-edit"></i></span>
+          <span class="popOut"><i class="fas fa-external-link-alt"></i></span>
+          <span class="cardOpts">
+            <span class="cardDots"><i class="fas fa-ellipsis-v"></i></span>
+            <div class="cardOptsMenu">
+              <span class="cardOption">Example</span>
+            </div>
+          </span>
+          <div class="editable" id="defEditor2" contentEditable="false"></div>
         </div>
       </div>
       
       <div id="col3" class="col">
-        <div class="card" id="card3">
-          <input type="text" id="input3">
-          <textarea id="textarea3"></textarea>
+        <div class="card defCard" id="defCard3" data-pos-t="in-col" data-pos-l="in-col">
+          <span class="dragCard"><i class="fas fa-arrows-alt"></i></span>
+          <span class="editCard"><i class="fas fa-edit"></i></span>
+          <span class="popOut"><i class="fas fa-external-link-alt"></i></span>
+          <span class="cardOpts">
+            <span class="cardDots"><i class="fas fa-ellipsis-v"></i></span>
+            <div class="cardOptsMenu">
+              <span class="cardOption">Example</span>
+            </div>
+          </span>
+          <div class="editable" id="defEditor3" contentEditable="false"></div>
         </div>
       </div>
       
     </div>
     
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

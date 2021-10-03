@@ -16,7 +16,23 @@ body {
 
 #topbar{
   grid-area: topbar;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+#optionDots{
+  padding: 0 10px;
+  cursor: pointer;
+}
+#addCard{
+  cursor: pointer;
+}
+
+#name {
+  display: inline;
+}
+
+
 
 #col1 {
   grid-area: col1;
@@ -30,10 +46,61 @@ body {
   grid-area: col3;
 }
 
+
 .card{
   background: aqua;
-  min-height: 20px;
+  min-height: 2em;
+  min-width: calc(4em + 30px);
   border: 1px solid black;
-  border-radius: 1em;
+  border-radius: 2px;
   padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "btn1 btn2 btn3 btn4" 
+    "editor editor editor editor"
+  ;
+  column-gap: 10px;
+}
+.dragCard{
+  grid-area: btn1;
+  cursor: move;
+}
+.editCard {
+  grid-area: btn2;
+  cursor:pointer;
+  text-align: center;
+}
+.popOut{
+  grid-area: btn3;
+  cursor: pointer;
+  text-align: right;
+}
+.cardOpts{
+  grid-area: btn4;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.cardOptsMenu{
+  display: none;
+  position: absolute;
+  background: darkturquoise;
+  border: 1px solid black;
+  border-radius: 0px 4px;
+}
+.editable:not(#name) {
+  margin-top: 1.5em;
+  min-height: 1em;
+  grid-area: editor;
+}
+[contenteditable="true"]:not(#name) {
+  border: solid 2px rebeccapurple;
+}
+
+#optionMenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
 }
